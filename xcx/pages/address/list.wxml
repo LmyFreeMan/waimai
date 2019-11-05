@@ -1,0 +1,31 @@
+<view class="address-select">
+  <view class="address-select__hd">
+    我的地址
+  </view>
+  <view class="address__list">
+    <view wx:for="{{list}}" wx:key="id" class="address__item">
+      <view data-address='{{item}}' bindtap='onSelect'>
+        <view class="nor-color">
+          {{item.linkman}} {{item.mobile}}
+        </view>
+        <view class="grey-color">
+          {{item.address}}
+        </view>
+      </view>
+      <view class="address-actions">
+        <navigator url="./add?id={{item.id}}&linkman={{item.linkman}}&mobile={{item.mobile}}&address={{item.address}}" class="address-actions__item">
+          <image class="address-actions__item-img" src="../../images/edit.png">
+          </image>
+        </navigator>
+        <view id="{{item.id}}" data-address='{{item.address}}' bindtap="onDelete" class="address-actions__item">
+          <image class="address-actions__item-img" src="../../images/delete.png">
+          </image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<navigator class="address-add-btn" url="./add">
+  新增地址
+</navigator>

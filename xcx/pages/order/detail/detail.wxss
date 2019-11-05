@@ -1,0 +1,151 @@
+page {
+  background-color: #eee;
+}
+
+.header {
+  width: 708rpx;
+  background-color: #fff;
+  margin: 21rpx;
+  text-align: center;
+}
+
+.header-img {
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 14rpx;
+  border-radius: 50%;
+}
+
+.header-status {
+  margin-top: 24rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.header-btn {
+  width: 180rpx;
+  font-size: 30rpx;
+  height: 70rpx;
+  margin-top: 10rpx;
+  line-height: 70rpx;
+  background-color: #fff;
+}
+
+.header-msg {
+  font-size: 22rpx;
+  margin-top: 16rpx;
+  padding-bottom: 34rpx;
+  color: #666;
+}
+
+.content {
+  width: 650rpx;
+  background-color: #fff;
+  margin: 21rpx;
+  padding: 0 29rpx;
+}
+
+.item {
+  /* height: 89rpx; */
+  border-bottom: 1rpx solid #eee;
+  line-height: 89rpx;
+  font-size: 26rpx;
+  position: relative;
+  color: #151515;
+  display: flex;
+  align-items: center;
+}
+
+.item-number-text {
+  position: absolute;
+  right: 142rpx;
+}
+
+.item-price-text {
+  position: absolute;
+  right: 0;
+}
+
+.item-img {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.item-phone {
+  margin-left: 13rpx;
+}
+
+.item-count {
+  font-size: 27rpx;
+  font-weight: bold;
+}
+
+.repair-state-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 0rpx 0 5rpx;
+}
+
+.repair-state-icon {
+  position: relative;
+  z-index: 2;
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 50rpx;
+  background: #d8d8d8;
+  border: 5rpx solid #eee;
+  margin: 15rpx 30rpx;
+}
+
+.repair-state-icon-first {
+  background: #0097fe;
+}
+
+.repair-state-info {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.repair-state-info::before {
+  position: absolute;
+  top: 30rpx;
+  left: -47rpx;
+  content: '';
+  width: 5rpx;
+  background: #eee;
+  height: 100%;
+}
+
+.repair-state-info.repair-state-info-last {
+  border: none;
+}
+
+.repair-state-info.repair-state-info-last::before {
+  background: transparent;
+  width: 0;
+  height: 0;
+}
+
+.repair-info-bd {
+  color: #888;
+}
+
+.repair-info-bd.repair-state-name {
+  flex: 1;
+  margin: 5rpx 0;
+  font-size: 35rpx;
+}
+
+.repair-info-item {
+  display: flex;
+  align-items: center;
+}
+
+.font-size-9pt {
+  font-size: 9pt;
+  color: #888;
+}

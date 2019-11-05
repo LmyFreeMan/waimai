@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goods/goods",
+    "pages/pay/pay",
+    "pages/order/order",
+    "pages/order/detail/detail",
+    "pages/my/my",
+    "pages/address/add",
+    "pages/address/list",
+    "pages/sender/sender",
+    "pages/sender/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0097fe",
+    "navigationBarTitleText": "海滨跑跑",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0097fe"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#0097fe",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/foot/index.png",
+        "selectedIconPath": "images/foot/index@selected.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/foot/order.png",
+        "selectedIconPath": "images/foot/order@selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/foot/find.png",
+        "selectedIconPath": "images/foot/find@selected.png"
+      }
+    ]
+  }
+}

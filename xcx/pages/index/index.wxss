@@ -1,0 +1,38 @@
+.banner {
+  width: 750rpx;
+  height: 320rpx;
+}
+
+.item {
+  height: 250rpx;
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.item-img {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #eee;
+  float: left;
+  margin-top: 35rpx;
+}
+
+.item-left {
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 35rpx;
+}
+
+.item-line {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #6a6a6a;
+}
+
+.shop-name {
+  font-weight: bold;
+  font-size: 40rpx;
+  color: black;
+}

@@ -1,0 +1,5 @@
+.line-20rpx {
+  height: 20rpx;
+  width: 750rpx;
+  background-color: #eee;
+}

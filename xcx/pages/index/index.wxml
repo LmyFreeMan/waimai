@@ -1,0 +1,17 @@
+
+<swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+  <block wx:for="{{bannerList}}" wx:key='*'>
+    <swiper-item>
+      <image src="{{imgurl}}{{item.image}}" class="banner" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='line-20rpx'></view>
+<view class='item' wx:for="{{mchList}}" wx:key="*" bindtap='toGood' data-data='{{item}}'>
+  <image class='item-img' src='{{imgurl}}{{item.image}}'></image>
+  <view class='item-left'>
+    <view class='item-line shop-name'>{{item.name}}</view>
+    <view class='item-line'>月售{{item.count}}单</view>
+    <view class='item-line'>￥{{item.request_price}}起送 | 配送费￥{{item.send_price}}</view>
+  </view>
+</view>

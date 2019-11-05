@@ -1,0 +1,113 @@
+.container {
+  background: -webkit-linear-gradient(top, #0097fe 0%, #fff 50%);
+}
+
+.header {
+  padding: 29rpx;
+  color: #baf0ff;
+}
+
+.header-tip {
+  font-size: 24rpx;
+}
+
+.header-address {
+  margin-top: 23rpx;
+  font-size: 42rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header-address-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 650rpx;
+  float: left;
+}
+
+.header-more {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.header-link {
+  margin-top: 23rpx;
+}
+
+.content {
+  background-color: #fff;
+  margin: 12rpx;
+  margin-top: 20rpx;
+  padding: 0 40rpx;
+}
+
+.content-title {
+  color: black;
+  font-weight: bold;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid#eee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item {
+  height: 125rpx;
+  line-height: 125rpx;
+  border-bottom: 1rpx dotted #eee;
+  font-size: 27rpx;
+}
+
+.item-img {
+  width: 66rpx;
+  height: 66rpx;
+  float: left;
+  margin-right: 35rpx;
+  margin-top: 30rpx;
+}
+
+.item-flex {
+  display: flex;
+  margin-left: 35rpx;
+}
+
+.item-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-flex1 {
+  flex: 1;
+}
+
+.item-flex3 {
+  flex: 3;
+}
+
+.tap {
+  position: fixed;
+  bottom: 0;
+  height: 96rpx;
+  width: 750rpx;
+  background-color: #141d27;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 35rpx;
+}
+
+.tap-left {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.tap-pay {
+  flex: 0 0 210rpx;
+  width: 210rpx;
+  text-align: center;
+  background-color: #00e066;
+  height: 96rpx;
+  line-height: 96rpx;
+}

@@ -1,0 +1,42 @@
+<view class='container'>
+  <view class='header'>
+    <view class='header-tip'>订单配送至</view>
+    <view class='header-address' bindtap='selectAddress'>
+      <view class='header-address-text'>{{address?address:'请选择地址'}}</view>
+      <image class='header-more' src='/images/right.png'></image>
+    </view>
+    <view class='header-link'>
+      {{linkman}}　{{mobile}}</view>
+  </view>
+
+  <view class='content'>
+    <view class='content-title'>
+      {{mch_name}}
+    </view>
+    <view class='item' wx:for='{{carArray}}' wx:key='*'>
+      <image class='item-img' src='{{imgurl}}{{item.image}}'></image>
+      <view class='item-flex'>
+        <view class='item-flex3 item-name'>{{item.name}}</view>
+        <view class='item-flex1' style='text-align:center'>X{{item.num}}</view>
+        <view class='item-flex1' style='text-align:right'>￥{{item.totalprice}}</view>
+      </view>
+    </view>
+    <view class='item'>
+      配送费
+      <view style='float:right'>￥{{send_price}}</view>
+    </view>
+    <view class='item'>
+      总计
+      <view style='float:right;font-weight:bold;font-size:47rpx;'>￥{{sum_price}}</view>
+    </view>
+  </view>
+  <view class='tap'>
+    <view class='tap-left'>
+      ￥{{sum_price}}
+    </view>
+    <view class='tap-pay' bindtap='insertOrder'>
+      去支付
+    </view>
+  </view>
+
+</view>

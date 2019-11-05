@@ -1,0 +1,92 @@
+<view class='header'>
+  <image class='header-img' src='{{imgurl}}{{data.mch_image}}'></image>
+  <view class='header-status'>{{order_status[data.status]}}</view>
+  <button class='header-btn' wx:if="{{data.status==4}}" bindtap='finishOrder' data-orderid='{{data.id}}'>完成配送</button>
+  <view class='header-msg'>{{data.desc}}</view>
+</view>
+
+<view class='content'>
+  <view class='item' wx:for="{{data.order}}" wx:key="*">
+    <text class='item-text'>{{item.name}}</text>
+    <text class='item-number-text'>X{{item.num}}</text>
+    <text class='item-price-text'>￥{{item.price}}</text>
+  </view>
+  <view class='item'>
+    <text class='item-text'>配送费</text>
+    <text class='item-price-text'>￥{{data.sendprice}}</text>
+  </view>
+  <view class='item'>
+    <image class='item-img' src='/images/phone.png'></image>
+    <text class='item-text item-phone' bindtap='contact' data-phone='{{data.mch_contact}}'>联系商家</text>
+    <text class='item-price-text item-count'>实付￥{{data.totalprice}}</text>
+  </view>
+</view>
+
+<view class='content'>
+  <view class='item'>
+    <text class='item-text'>配送信息</text>
+  </view>
+  <view class='item'>
+    <text class='item-text'>联系人：{{data.linkman}}</text>
+  </view>
+
+  <view class='item' bindtap='contact' data-phone='{{data.mobile}}'>
+    <text class='item-text'>联系电话：{{data.mobile}}</text>
+    <image class='item-img' style='position:absolute;right:20rpx;' src='/images/phone.png'></image>
+  </view>
+  <view class='item'>
+    <text class='item-text'>联系地址：{{data.address}}</text>
+  </view>
+</view>
+
+<view class='content'>
+  <view class='item'>
+    <text class='item-text'>配送员信息</text>
+  </view>
+  <view class='item'>
+    <text class='item-text'>配送员姓名：{{data.sendername}}</text>
+  </view>
+
+  <view class='item'>
+    <text class='item-text'>配送员电话：{{data.senderphone}}</text>
+  </view>
+</view>
+
+<view class='content'>
+  <view class='item'>
+    <text class='item-text'>订单信息</text>
+  </view>
+  <view class='item'>
+    <text class='item-text'>订单号：{{data.id}}</text>
+  </view>
+  <!-- <view wx:for="{{ordermsg}}" wx:key="*">
+    <view class="repair-state-item">
+      <view class="repair-state-icon {{index==0?'repair-state-icon-first':''}}"></view>
+      <view class="repair-state-info {{index==ordermsg.length-1?'repair-state-info-last':''}}">
+        <view class="repair-info-item">
+          <text class="repair-info-bd repair-state-name" style="{{index==0?'color:#0097fe':''}}">{{item.status}}</text>
+          <text class='font-size-9pt'>{{item.time}}</text>
+        </view>
+        <view class="repair-info-item">
+          <text class="repair-info-bd font-size-9pt" wx:if="{{item.desc}}">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+  <view wx:for="{{ordermsg}}" wx:key="*">
+    <view class="repair-state-item">
+      <view class="repair-state-icon {{index==0?'repair-state-icon-first':''}}"></view>
+      <view class="repair-state-info {{index==ordermsg.length-1?'repair-state-info-last':''}}">
+        <view class="repair-info-item">
+          <text class="repair-info-bd repair-state-name" style="{{index==0?'color:#0097fe':''}}">{{item.status}}</text>
+          <text class='font-size-9pt'>{{item.time}}</text>
+        </view>
+        <view class="repair-info-item">
+          <text class="repair-info-bd font-size-9pt" wx:if="{{item.desc}}">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

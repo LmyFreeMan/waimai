@@ -1,0 +1,26 @@
+<view class='item' wx:for="{{list}}" wx:key='*' bindtap='toDetail' data-data="{{item}}">
+  <view class='item-order'>
+    <view class='item-order-top'>
+      <image class='item-order-top-img' src='{{imgurl}}{{item.mch_image}}'></image>
+      <view class='item-order-top-right'>
+        <view class='item-order-top-right-top'>
+          <view class='item-order-top-right-top-text'>{{item.mch_name}}</view>
+          <!-- <image class='item-order-top-right-top-more' src='/images/more.png'></image> -->
+          <view class='item-order-top-right-top-right text-color{{item.status}}'>{{order_status[item.status]}}</view>
+          <!-- <button class='item-order-top-right-top-right-btn text-color{{item.status}}' wx:if='{{item.status==1}}'>支付</button> -->
+        </view>
+        <view class='item-order-top-right-time'>
+          {{item.createtime}}
+        </view>
+      </view>
+    </view>
+    <view class='item-msg'>
+      <text class='item-msg-desc'>{{item.order[0].name}}等{{item.order.length}}件商品</text>
+      <text class='item-msg-price'>￥{{item.totalprice}}</text>
+    </view>
+  </view>
+</view>
+<view class="weui-loadmore" hidden="{{!isHideLoadMore}}">
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore__tips">正在加载</view>
+</view>
